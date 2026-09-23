@@ -1,0 +1,15 @@
+# Netlify 部署配置：纯静态单文件 H5，无构建步骤
+# 关联本仓库后，Netlify 会读取本文件自动填好「发布目录」，无需手动配置
+[build]
+  publish = "."
+
+# index.html 是随仓库提交的成品，禁用长缓存，保证 push 后立刻生效
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
