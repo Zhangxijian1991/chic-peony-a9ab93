@@ -1,0 +1,4 @@
+# index.html 是已构建验证的成品，必须与本地构建逐字节一致：
+# 禁用行尾转换（全局 core.autocrlf=true 会把 CRLF 归一成 LF，导致字节数变化）
+index.html -text
+.nojekyll -text
